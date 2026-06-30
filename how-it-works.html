@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works • New Reality</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap');
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+        }
+        
+        .neon-text {
+            text-shadow: 0 0 10px rgb(124 58 237),
+                         0 0 20px rgb(124 58 237);
+        }
+        
+        .gradient-bg {
+            background: radial-gradient(at center bottom, #1E1B4B 0%, #000000 70%);
+        }
+        
+        .step-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .step-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 30px 60px -15px rgb(124 58 237 / 0.3);
+        }
+    </style>
+</head>
+<body class="bg-black text-white font-sans gradient-bg min-h-screen">
+    
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur-lg">
+        <div class="max-w-screen-2xl mx-auto px-8 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 bg-gradient-to-br from-violet-500 to-cyan-400 rounded-2xl flex items-center justify-center text-2xl font-bold">NR</div>
+                <div class="text-2xl font-bold tracking-tighter">NEW REALITY</div>
+            </div>
+            
+            <div class="flex items-center gap-8 text-sm font-medium">
+                <a href="/home/jakob/Documents/NewReality/index.html" class="hover:text-violet-400 transition-colors">Home</a>
+                <a href="/home/jakob/Documents/NewReality/how-it-works.html" class="text-violet-400 font-semibold">How it Works</a>
+                <a href="/home/jakob/Documents/NewReality/for-customers.html" class="hover:text-violet-400 transition-colors">For Customers</a>
+                <a href="/home/jakob/Documents/NewReality/for-businesses.html" class="hover:text-violet-400 transition-colors">For Businesses</a>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <button onclick="window.location.href='/'" 
+                        class="px-6 py-2.5 text-sm font-semibold rounded-2xl border border-white/30 hover:border-white/60 transition-all">
+                    Back to Home
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="pt-28 pb-20">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            
+            <!-- Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-3 bg-white/5 px-6 py-3 rounded-3xl mb-6">
+                    <i class="fa-solid fa-arrows-rotate text-violet-400"></i>
+                    <span class="uppercase tracking-widest text-sm font-medium">Simple • Transparent • Secure</span>
+                </div>
+                <h1 class="text-6xl font-bold tracking-tighter neon-text mb-6">
+                    How New Reality Works
+                </h1>
+                <p class="text-xl text-gray-400">
+                    A permission-first platform that connects customers and businesses with complete transparency and trust.
+                </p>
+            </div>
+
+            <!-- CUSTOMER SECTION -->
+            <div class="mb-24">
+                <div class="flex items-center gap-4 mb-12">
+                    <div class="w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-500 rounded-3xl flex items-center justify-center text-3xl">👤</div>
+                    <div>
+                        <span class="uppercase text-pink-400 text-sm font-semibold tracking-widest">FOR CUSTOMERS</span>
+                        <h2 class="text-4xl font-semibold">You Stay in Complete Control</h2>
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Customer Step 1 -->
+                    <div class="step-card glass rounded-3xl p-8">
+                        <div class="text-6xl font-bold text-pink-400 mb-4">01</div>
+                        <h3 class="text-2xl font-semibold mb-3">Sign Up &amp; Verify</h3>
+                        <p class="text-gray-400 mb-6">Create your account with secure identity verification. Your data is protected from the start.</p>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-start gap-3"><span class="text-emerald-400">✓</span> One-time verification</li>
+                            <li class="flex items-start gap-3"><span class="text-emerald-400">✓</span> Control your privacy settings</li>
+                        </ul>
+                    </div>
+
+                    <!-- Customer Step 2 -->
+                    <div class="step-card glass rounded-3xl p-8">
+                        <div class="text-6xl font-bold text-pink-400 mb-4">02</div>
+                        <h3 class="text-2xl font-semibold mb-3">Set Your Permissions</h3>
+                        <p class="text-gray-400 mb-6">Choose which types of businesses can reach you and for what reasons. You decide everything.</p>
+                        <div class="bg-black/40 rounded-2xl p-5 text-sm">
+                            Example: Allow Solar companies but only for energy quotes
+                        </div>
+                    </div>
+
+                    <!-- Customer Step 3 -->
+                    <div class="step-card glass rounded-3xl p-8">
+                        <div class="text-6xl font-bold text-pink-400 mb-4">03</div>
+                        <h3 class="text-2xl font-semibold mb-3">Review &amp; Approve</h3>
+                        <p class="text-gray-400 mb-6">When a verified business wants to connect, you get a clear request. Approve or decline with one tap.</p>
+                        <div class="text-xs text-emerald-400 flex items-center gap-2">
+                            <i class="fa-solid fa-eye"></i>
+                            Full transparency before any interaction
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DIVIDER -->
+            <div class="flex justify-center mb-16">
+                <div class="h-px w-32 bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
+            </div>
+
+            <!-- BUSINESS SECTION -->
+            <div>
+                <div class="flex items-center gap-4 mb-12">
+                    <div class="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-3xl flex items-center justify-center text-3xl">💼</div>
+                    <div>
+                        <span class="uppercase text-cyan-400 text-sm font-semibold tracking-widest">FOR BUSINESSES</span>
+                        <h2 class="text-4xl font-semibold">Grow with Trust, Not Spam</h2>
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Business Step 1 -->
+                    <div class="step-card glass rounded-3xl p-8">
+                        <div class="text-6xl font-bold text-cyan-400 mb-4">01</div>
+                        <h3 class="text-2xl font-semibold mb-3">Apply &amp; Get Verified</h3>
+                        <p class="text-gray-400 mb-6">Submit your business details. We verify legitimacy, compliance, and commitment to transparency.</p>
+                        <div class="inline-block bg-white/10 text-xs px-4 py-2 rounded-3xl">Public Trust Score</div>
+                    </div>
+
+                    <!-- Business Step 2 -->
+                    <div class="step-card glass rounded-3xl p-8">
+                        <div class="text-6xl font-bold text-cyan-400 mb-4">02</div>
+                        <h3 class="text-2xl font-semibold mb-3">Be Discovered</h3>
+                        <p class="text-gray-400 mb-6">Only customers who have opted-in to your industry will see your profile. No cold outreach.</p>
+                        <div class="text-sm text-gray-400">Reach highly qualified, permissioned leads</div>
+                    </div>
+
+                    <!-- Business Step 3 -->
+                    <div class="step-card glass rounded-3xl p-8">
+                        <div class="text-6xl font-bold text-cyan-400 mb-4">03</div>
+                        <h3 class="text-2xl font-semibold mb-3">Connect &amp; Build Trust</h3>
+                        <p class="text-gray-400 mb-6">Communicate through our secure platform. Every interaction is logged and auditable by the customer.</p>
+                        <div class="flex items-center gap-2 text-emerald-400 text-sm">
+                            <i class="fa-solid fa-handshake"></i>
+                            Earn long-term relationships
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OVERALL FLOW -->
+            <div class="mt-24 glass rounded-3xl p-10 md:p-16">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-semibold mb-3">The Complete Flow</h3>
+                    <p class="text-gray-400">From signup to successful connection</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-6 text-center">
+                    <div class="space-y-4">
+                        <div class="mx-auto w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-xl">1</div>
+                        <div class="font-medium text-sm">Customer signs up</div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="mx-auto w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-xl">2</div>
+                        <div class="font-medium text-sm">Business applies &amp; verifies</div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="mx-auto w-12 h-12 bg-violet-500/20 text-violet-400 rounded-2xl flex items-center justify-center text-xl">3</div>
+                        <div class="font-medium text-sm">New Reality matches &amp; approves</div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="mx-auto w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-xl">4</div>
+                        <div class="font-medium text-sm">Customer approves business</div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="mx-auto w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-xl">5</div>
+                        <div class="font-medium text-sm">Secure communication begins</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-black border-t border-white/10 py-12">
+        <div class="max-w-screen-2xl mx-auto px-8 text-center text-gray-400 text-sm">
+            <p>Built on Permission • Transparency • Trust</p>
+            <p class="mt-2">© 2026 New Reality, Inc.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links if needed
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

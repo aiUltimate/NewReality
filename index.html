@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Reality • Connect with Trust</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap');
+        
+        :root {
+            --nr-purple: #7C3AED;
+            --nr-blue: #22D3EE;
+        }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+        }
+        
+        .neon-text {
+            text-shadow: 0 0 10px rgb(124 58 237),
+                         0 0 20px rgb(124 58 237);
+        }
+        
+        .gradient-bg {
+            background: radial-gradient(at center bottom, #1E1B4B 0%, #000000 70%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgb(124 58 237 / 0.25);
+        }
+        
+        .phone-mock {
+            box-shadow: 0 0 0 12px #111827,
+                        0 0 0 16px #1F2937;
+        }
+    </style>
+</head>
+<body class="bg-black text-white font-sans gradient-bg overflow-x-hidden">
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-lg">
+        <div class="max-w-screen-2xl mx-auto px-8 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 bg-gradient-to-br from-violet-500 to-cyan-400 rounded-2xl flex items-center justify-center text-2xl font-bold">NR</div>
+                <div>
+                    <span class="text-2xl font-bold tracking-tighter">NEW REALITY</span>
+                </div>
+            </div>
+
+           
+            
+           <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+    <a href="/home/jakob/Documents/NewReality/for-customers.html" class="hover:text-violet-400 transition-colors">For Customers</a>
+    <a href="/home/jakob/Documents/NewReality/for-businesses.html" class="hover:text-violet-400 transition-colors">For Businesses</a>
+    <a href="/home/jakob/Documents/NewReality/how-it-works.html" class="hover:text-violet-400 transition-colors">How it Works</a>
+    <a href="/trust-layer.html" class="hover:text-violet-400 transition-colors">Trust Layer</a>
+           </div>
+            
+            <div class="flex items-center gap-4">
+                <button onclick="document.getElementById('signup-modal').classList.remove('hidden')" 
+                        class="px-6 py-2.5 text-sm font-semibold rounded-2xl border border-white/30 hover:border-white/60 transition-all">
+                    Sign Up
+                </button>
+                <button onclick="document.getElementById('business-modal').classList.remove('hidden')"
+                        class="px-6 py-2.5 bg-white text-black rounded-2xl text-sm font-semibold hover:bg-white/90 transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-briefcase"></i>
+                    For Business
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="pt-28 pb-20 px-6 md:px-12 max-w-screen-2xl mx-auto">
+        <div class="grid md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-7 space-y-8">
+                <div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-3xl px-5 py-2 text-sm">
+                    <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                    NOW IN BETA
+                </div>
+                
+                <h1 class="text-6xl md:text-7xl font-bold tracking-tighter leading-none neon-text">
+                    CONNECTING TRUSTED<br> 
+                    <span class="bg-gradient-to-r from-violet-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent">BUSINESSES</span><br>
+                    WITH EMPOWERED CUSTOMERS
+                </h1>
+                
+                <p class="text-xl text-gray-400 max-w-lg">
+                    Permission. Transparency. Trust. All in one place.
+                </p>
+                
+                <div class="flex flex-wrap gap-4">
+                    <button onclick="document.getElementById('signup-modal').classList.remove('hidden')" 
+                            class="px-8 py-4 bg-gradient-to-r from-violet-600 to-indigo-600 rounded-3xl font-semibold text-lg flex items-center gap-3 hover:scale-105 transition-all">
+                        Join as Customer
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                    
+                    <button onclick="document.getElementById('business-modal').classList.remove('hidden')" 
+                            class="px-8 py-4 border border-white/30 hover:border-white/70 rounded-3xl font-semibold text-lg flex items-center gap-3 transition-all">
+                        Grow Your Business
+                    </button>
+                </div>
+                
+                <div class="flex items-center gap-8 pt-6">
+                    <div class="flex items-center gap-2">
+                        <div class="flex -space-x-3">
+                            <div class="w-7 h-7 rounded-2xl bg-emerald-500 ring-2 ring-black flex items-center justify-center text-xs">✓</div>
+                        </div>
+                        <div class="text-sm">
+                            <div class="font-medium">98% Trust Score</div>
+                            <div class="text-emerald-400 text-xs">Average on platform</div>
+                        </div>
+                    </div>
+                    <div class="h-10 w-px bg-white/10"></div>
+                    <div class="text-sm">
+                        <span class="text-emerald-400 font-mono text-2xl font-semibold">128k+</span><br>
+                        <span class="text-gray-400">Active connections</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Phone Mockup -->
+            <div class="md:col-span-5 flex justify-center">
+                <div class="phone-mock bg-gray-900 rounded-[3rem] p-3 w-full max-w-[280px]">
+                    <div class="bg-black rounded-[2.25rem] overflow-hidden h-[520px] relative">
+                        <!-- Phone header -->
+                        <div class="h-11 bg-black flex items-end justify-center">
+                            <div class="w-28 h-4 bg-gray-800 rounded-full mb-2"></div>
+                        </div>
+                        
+                        <!-- App Screen -->
+                        <div class="px-4 pt-6 h-full bg-gradient-to-b from-slate-950 to-zinc-950">
+                            <div class="flex justify-between items-center mb-6">
+                                <div class="text-sm font-medium">My Permissions</div>
+                                <div class="text-emerald-400 text-xs px-3 py-1 bg-emerald-900/30 rounded-3xl">3 Approved</div>
+                            </div>
+                            
+                            <div class="space-y-3">
+                                <div class="glass rounded-3xl p-4 flex items-center gap-4">
+                                    <div class="w-9 h-9 bg-amber-500/10 text-amber-400 rounded-2xl flex items-center justify-center">⚡</div>
+                                    <div class="flex-1">
+                                        <div class="font-medium text-sm">Solaris Energy</div>
+                                        <div class="text-xs text-gray-400">Energy Services</div>
+                                    </div>
+                                    <div class="text-emerald-400 text-xs font-medium px-3 py-1 bg-emerald-900/40 rounded-2xl">Approved</div>
+                                </div>
+                                
+                                <div class="glass rounded-3xl p-4 flex items-center gap-4">
+                                    <div class="w-9 h-9 bg-blue-500/10 text-blue-400 rounded-2xl flex items-center justify-center">🏠</div>
+                                    <div class="flex-1">
+                                        <div class="font-medium text-sm">Luxe Home Real Estate</div>
+                                        <div class="text-xs text-gray-400">Approved</div>
+                                    </div>
+                                    <div class="text-emerald-400 text-xs font-medium px-3 py-1 bg-emerald-900/40 rounded-2xl">Approved</div>
+                                </div>
+                            </div>
+                            
+                            <div class="absolute bottom-8 left-4 right-4 bg-black/70 rounded-3xl p-4 text-center text-xs border border-white/10">
+                                <div class="flex justify-center gap-6 text-emerald-400">
+                                    <div><i class="fa-solid fa-shield"></i></div>
+                                    <div><i class="fa-solid fa-lock"></i></div>
+                                </div>
+                                <div class="mt-2 text-white/70">Your data is always protected</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MISSION -->
+    <div class="max-w-screen-2xl mx-auto px-8 py-12 border-t border-white/10">
+        <div class="glass rounded-3xl p-8 md:p-12 flex flex-col md:flex-row gap-8 items-center">
+            <div class="flex-1">
+                <div class="inline-flex items-center gap-2 bg-violet-500/10 text-violet-400 px-4 py-2 rounded-3xl text-sm mb-4">
+                    <i class="fa-solid fa-shield"></i>
+                    OUR MISSION
+                </div>
+                <h2 class="text-4xl font-semibold tracking-tight">Building a safer, smarter, and more transparent way for businesses to connect with customers — through permission, not intrusion.</h2>
+            </div>
+            <div class="flex-1 text-lg text-gray-300">
+                We verify. We protect. We connect.<br>
+                <span class="text-violet-400">We own a portion of every business on the platform.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- TRUST LAYER -->
+    <div class="max-w-screen-2xl mx-auto px-8 py-16">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold tracking-tighter mb-3">TRUST &amp; TRANSPARENCY LAYER</h2>
+            <p class="text-gray-400 max-w-md mx-auto">The secure core that powers every interaction on New Reality</p>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-4">
+            <div class="glass rounded-3xl p-6 card-hover text-center">
+                <div class="w-12 h-12 mx-auto mb-4 bg-white/10 rounded-2xl flex items-center justify-center text-2xl">🪪</div>
+                <div class="font-semibold">Identity Verification</div>
+            </div>
+            <div class="glass rounded-3xl p-6 card-hover text-center">
+                <div class="w-12 h-12 mx-auto mb-4 bg-white/10 rounded-2xl flex items-center justify-center text-2xl">✅</div>
+                <div class="font-semibold">Business Verification</div>
+            </div>
+            <div class="glass rounded-3xl p-6 card-hover text-center">
+                <div class="w-12 h-12 mx-auto mb-4 bg-white/10 rounded-2xl flex items-center justify-center text-2xl">🔒</div>
+                <div class="font-semibold">End-to-End Encryption</div>
+            </div>
+            <div class="glass rounded-3xl p-6 card-hover text-center">
+                <div class="w-12 h-12 mx-auto mb-4 bg-white/10 rounded-2xl flex items-center justify-center text-2xl">📋</div>
+                <div class="font-semibold">Transparency Enforcement</div>
+            </div>
+            <div class="glass rounded-3xl p-6 card-hover text-center">
+                <div class="w-12 h-12 mx-auto mb-4 bg-white/10 rounded-2xl flex items-center justify-center text-2xl">📊</div>
+                <div class="font-semibold">Regular Audits &amp; Monitoring</div>
+            </div>
+            <div class="glass rounded-3xl p-6 card-hover text-center">
+                <div class="w-12 h-12 mx-auto mb-4 bg-white/10 rounded-2xl flex items-center justify-center text-2xl">🤝</div>
+                <div class="font-semibold">Customer Consent Management</div>
+            </div>
+            <div class="glass rounded-3xl p-6 card-hover text-center">
+                <div class="w-12 h-12 mx-auto mb-4 bg-white/10 rounded-2xl flex items-center justify-center text-2xl">⚖️</div>
+                <div class="font-semibold">Dispute Resolution</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BENEFITS -->
+    <div class="max-w-screen-2xl mx-auto px-8 grid md:grid-cols-2 gap-8 py-16 border-t border-white/10">
+        <!-- Customer Benefits -->
+        <div class="glass rounded-3xl p-10">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="w-12 h-12 bg-gradient-to-br from-pink-500 to-violet-500 rounded-2xl flex items-center justify-center text-3xl">👤</div>
+                <div>
+                    <div class="uppercase text-xs tracking-widest text-pink-400">FOR CUSTOMERS</div>
+                    <h3 class="text-3xl font-semibold">You are in control.</h3>
+                </div>
+            </div>
+            <ul class="space-y-6">
+                <li class="flex gap-4">
+                    <i class="fa-solid fa-check text-emerald-400 mt-1"></i>
+                    <div>Only connect with businesses you approve</div>
+                </li>
+                <li class="flex gap-4">
+                    <i class="fa-solid fa-check text-emerald-400 mt-1"></i>
+                    <div>Full visibility into data usage &amp; trust scores</div>
+                </li>
+                <li class="flex gap-4">
+                    <i class="fa-solid fa-check text-emerald-400 mt-1"></i>
+                    <div>Your data is never sold</div>
+                </li>
+                <li class="flex gap-4">
+                    <i class="fa-solid fa-check text-emerald-400 mt-1"></i>
+                    <div>Manage or revoke permissions instantly</div>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Business Benefits -->
+        <div class="glass rounded-3xl p-10">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center text-3xl">💼</div>
+                <div>
+                    <div class="uppercase text-xs tracking-widest text-cyan-400">FOR BUSINESSES</div>
+                    <h3 class="text-3xl font-semibold">Earn trust. Grow sustainably.</h3>
+                </div>
+            </div>
+            <ol class="space-y-6 text-sm">
+                <li class="flex gap-5">
+                    <div class="font-mono text-cyan-400 font-bold text-xl w-6">01</div>
+                    <div>Apply &amp; get verified</div>
+                </li>
+                <li class="flex gap-5">
+                    <div class="font-mono text-cyan-400 font-bold text-xl w-6">02</div>
+                    <div>Provide full transparency to customers</div>
+                </li>
+                <li class="flex gap-5">
+                    <div class="font-mono text-cyan-400 font-bold text-xl w-6">03</div>
+                    <div>Connect only with approved, high-trust customers</div>
+                </li>
+                <li class="flex gap-5">
+                    <div class="font-mono text-cyan-400 font-bold text-xl w-6">04</div>
+                    <div>Access rich analytics &amp; premium growth tools</div>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- REVENUE MODEL -->
+    <div class="max-w-screen-2xl mx-auto px-8 py-20 bg-zinc-950/50 border-y border-white/10">
+        <div class="grid md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-5">
+                <h2 class="text-4xl font-bold tracking-tight mb-6">A New Way of Doing Business</h2>
+                <div class="space-y-8">
+                    <div class="flex gap-6">
+                        <div class="shrink-0 w-10 h-10 bg-emerald-500/10 text-emerald-400 rounded-2xl flex items-center justify-center text-2xl">$</div>
+                        <div>
+                            <div class="font-semibold">Platform Fee</div>
+                            <div class="text-gray-400 text-sm">Businesses pay to access qualified, permissioned customers.</div>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="shrink-0 w-10 h-10 bg-violet-500/10 text-violet-400 rounded-2xl flex items-center justify-center text-2xl">📈</div>
+                        <div>
+                            <div class="font-semibold">Equity Stake</div>
+                            <div class="text-gray-400 text-sm">We take a small equity stake in every business on the platform.</div>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="shrink-0 w-10 h-10 bg-amber-500/10 text-amber-400 rounded-2xl flex items-center justify-center text-2xl">✦</div>
+                        <div>
+                            <div class="font-semibold">Premium Services</div>
+                            <div class="text-gray-400 text-sm">Advanced analytics, automation, and growth tools.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="md:col-span-7">
+                <div class="glass rounded-3xl p-8">
+                    <div class="flex justify-between items-end mb-8">
+                        <div>
+                            <div class="text-emerald-400 text-sm font-medium">WIN-WIN MODEL</div>
+                            <div class="text-3xl font-semibold">When businesses win, <span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-cyan-300">we win.</span></div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-6xl font-mono font-bold text-emerald-400">92</div>
+                            <div class="text-xs tracking-widest">AVERAGE TRUST SCORE</div>
+                        </div>
+                    </div>
+                    
+                    <div class="h-2 bg-white/10 rounded-3xl overflow-hidden mb-8">
+                        <div class="h-full w-[88%] bg-gradient-to-r from-violet-400 to-cyan-400 rounded-3xl"></div>
+                    </div>
+                    
+                    <div class="text-center text-sm text-gray-400">
+                        Aligned incentives. Real transparency.<br>
+                        A platform that actually works for everyone.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HOW IT WORKS -->
+    <div class="max-w-screen-2xl mx-auto px-8 py-20">
+        <div class="text-center mb-12">
+            <div class="inline-block bg-white/5 px-6 py-2 rounded-3xl text-sm mb-4">5 SIMPLE STEPS</div>
+            <h2 class="text-5xl font-bold tracking-tighter">How New Reality Works</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-5 gap-6">
+            <div class="glass rounded-3xl p-8 card-hover">
+                <div class="text-5xl font-mono text-violet-400 mb-6">01</div>
+                <div class="font-semibold mb-2">Customer sets preferences</div>
+                <div class="text-gray-400 text-sm">Signs up, verifies identity, and controls who can reach them.</div>
+            </div>
+            <div class="glass rounded-3xl p-8 card-hover">
+                <div class="text-5xl font-mono text-violet-400 mb-6">02</div>
+                <div class="font-semibold mb-2">Business applies &amp; verifies</div>
+                <div class="text-gray-400 text-sm">Provides complete transparency and earns a trust score.</div>
+            </div>
+            <div class="glass rounded-3xl p-8 card-hover">
+                <div class="text-5xl font-mono text-violet-400 mb-6">03</div>
+                <div class="font-semibold mb-2">New Reality approves</div>
+                <div class="text-gray-400 text-sm">Matches high-trust businesses with qualified customers.</div>
+            </div>
+            <div class="glass rounded-3xl p-8 card-hover">
+                <div class="text-5xl font-mono text-violet-400 mb-6">04</div>
+                <div class="font-semibold mb-2">Customer approves connection</div>
+                <div class="text-gray-400 text-sm">Gives explicit permission before any communication.</div>
+            </div>
+            <div class="glass rounded-3xl p-8 card-hover">
+                <div class="text-5xl font-mono text-violet-400 mb-6">05</div>
+                <div class="font-semibold mb-2">Secure, transparent interaction</div>
+                <div class="text-gray-400 text-sm">All messages and data usage logged with full auditability.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FINAL CTA -->
+    <div class="max-w-screen-2xl mx-auto px-8 py-24 text-center border-t border-white/10">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="text-5xl font-bold tracking-tighter mb-6">Ready to join the new reality?</h2>
+            <p class="text-xl text-gray-300 mb-10">Be part of a movement that puts permission, privacy, and trust first.</p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="document.getElementById('signup-modal').classList.remove('hidden')" 
+                        class="px-10 py-5 bg-white text-black font-semibold rounded-3xl text-lg hover:scale-105 transition-all">
+                    Get Started as a Customer
+                </button>
+                <button onclick="document.getElementById('business-modal').classList.remove('hidden')" 
+                        class="px-10 py-5 border-2 border-white/70 hover:border-white font-semibold rounded-3xl text-lg transition-all">
+                    List Your Business
+                </button>
+            </div>
+            
+            <div class="mt-12 text-xs text-gray-500 flex items-center justify-center gap-8">
+                <div>🔒 Bank-level security</div>
+                <div>🌍 Global availability</div>
+                <div>✅ Verified businesses only</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-black border-t border-white/10 py-16">
+        <div class="max-w-screen-2xl mx-auto px-8 grid grid-cols-2 md:grid-cols-5 gap-8 text-sm">
+            <div>
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-8 h-8 bg-gradient-to-br from-violet-500 to-cyan-400 rounded-2xl flex items-center justify-center font-bold">NR</div>
+                    <span class="font-semibold text-xl">New Reality</span>
+                </div>
+                <p class="text-gray-400">The trusted middle layer between customers and businesses.</p>
+            </div>
+            <div>
+                <div class="font-medium mb-4">Platform</div>
+                <div class="space-y-3 text-gray-400">
+                    <div>For Customers</div>
+                    <div>For Businesses</div>
+                    <div>Pricing</div>
+                </div>
+            </div>
+            <div>
+                <div class="font-medium mb-4">Company</div>
+                <div class="space-y-3 text-gray-400">
+                    <div>About Us</div>
+                    <div>Our Mission</div>
+                    <div>Careers</div>
+                    <div>Trust Center</div>
+                </div>
+            </div>
+            <div>
+                <div class="font-medium mb-4">Resources</div>
+                <div class="space-y-3 text-gray-400">
+                    <div>Blog</div>
+                    <div>Help Center</div>
+                    <div>Transparency Reports</div>
+                </div>
+            </div>
+            <div class="col-span-2 md:col-span-1">
+                <div class="font-medium mb-4">Legal</div>
+                <div class="space-y-3 text-gray-400">
+                    <div>Privacy Policy</div>
+                    <div>Terms of Service</div>
+                    <div>Data Protection</div>
+                </div>
+                
+                <div class="mt-12 text-[10px] text-gray-500">
+                    © 2026 New Reality, Inc.<br>
+                    All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SIGNUP MODAL -->
+    <div id="signup-modal" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center z-[100]">
+        <div class="glass max-w-md w-full mx-4 rounded-3xl p-8">
+            <div class="flex justify-between items-center mb-8">
+                <h3 class="text-2xl font-semibold">Create your account</h3>
+                <button onclick="document.getElementById('signup-modal').classList.add('hidden')" class="text-3xl leading-none">&times;</button>
+            </div>
+            
+            <div class="space-y-6">
+                <input type="email" placeholder="Email address" class="w-full bg-white/5 border border-white/20 rounded-2xl px-6 py-4 outline-none focus:border-violet-400">
+                <input type="text" placeholder="Full name" class="w-full bg-white/5 border border-white/20 rounded-2xl px-6 py-4 outline-none focus:border-violet-400">
+                
+                <div class="pt-4">
+                    <button onclick="fakeSignup()" 
+                            class="w-full py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-2xl font-semibold">
+                        Continue with Email
+                    </button>
+                </div>
+                
+                <div class="text-center text-xs text-gray-400">or</div>
+                
+                <button class="w-full py-4 border border-white/30 rounded-2xl flex items-center justify-center gap-3">
+                    <i class="fa-brands fa-google"></i>
+                    Continue with Google
+                </button>
+            </div>
+            
+            <div class="text-center text-xs text-gray-400 mt-8">
+                By signing up you agree to our <span class="underline">Terms</span> and <span class="underline">Privacy Policy</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- BUSINESS MODAL -->
+    <div id="business-modal" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center z-[100]">
+        <div class="glass max-w-md w-full mx-4 rounded-3xl p-8">
+            <div class="flex justify-between items-center mb-8">
+                <h3 class="text-2xl font-semibold">Apply as a Business</h3>
+                <button onclick="document.getElementById('business-modal').classList.add('hidden')" class="text-3xl leading-none">&times;</button>
+            </div>
+            
+            <div class="space-y-6">
+                <input type="text" placeholder="Business Name" class="w-full bg-white/5 border border-white/20 rounded-2xl px-6 py-4 outline-none">
+                <input type="email" placeholder="Business Email" class="w-full bg-white/5 border border-white/20 rounded-2xl px-6 py-4 outline-none">
+                <textarea placeholder="What does your business do?" rows="3" class="w-full bg-white/5 border border-white/20 rounded-2xl px-6 py-4 outline-none resize-none"></textarea>
+                
+                <button onclick="fakeBusinessApply()" 
+                        class="w-full py-4 bg-white text-black font-semibold rounded-2xl">
+                    Submit Application
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function fakeSignup() {
+            alert("🎉 Welcome to New Reality! Your verification link has been sent.");
+            document.getElementById('signup-modal').classList.add('hidden');
+        }
+        
+        function fakeBusinessApply() {
+            alert("✅ Application received. Our team will review it shortly.");
+            document.getElementById('business-modal').classList.add('hidden');
+        }
+        
+        // Tailwind script already included
+        console.log('%cNew Reality Homepage ready 🚀', 'color:#a855f7; font-family:monospace');
+        
+        // Keyboard escape support
+        document.addEventListener('keydown', function(e) {
+            if (e.key === "Escape") {
+                const modals = document.querySelectorAll('.fixed.inset-0');
+                modals.forEach(modal => {
+                    if (!modal.classList.contains('hidden')) {
+                        modal.classList.add('hidden');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
